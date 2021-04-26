@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rubén Quispe - Developer</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__picture">
+            <a href="#hero"><img src="./assets/img/logo_promitia.png" alt="brain logo"></a>
+        </div>
+        <div class="header__menu">
+            <label for="hamburger" class="hamburger">
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+                <div class="hamburger__line"></div>
+            </label>
+            <input type="checkbox" id="hamburger" class="hamburger__check" onclick="openNav()">
+
+            <!-- Button to close the overlay navigation -->
+            <a class="closeBtn" onclick="closeNav()">&times;</a>
+            <nav class="header__nav" >
+                <a class="header__link"  href="#about" onclick="closeNav()" ><span class="header__link__tag">&lt;</span>&nbsp; about me &nbsp;<span class="header__link__tag" >&gt;</span></a>
+                <a class="header__link"  href="#experience" onclick="closeNav()" ><span class="header__link__tag">&lt;</span>&nbsp; experience &nbsp;<span class="header__link__tag">&gt;</span></a>
+                <a class="header__link"  href="#projects" onclick="closeNav()" ><span class="header__link__tag">&lt;</span>&nbsp; projects &nbsp;<span class="header__link__tag">&gt;</span></a>
+                <a class="header__link"  href="#contact" onclick="closeNav()" ><span class="header__link__tag">&lt;</span>&nbsp; contact me &nbsp;<span class="header__link__tag">&gt;</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero" id="hero">
+        <img class="hero__profile" src="./assets/img/profile.png" alt="photo profile">
+        <h1 class="hero__name">RUBEN QUISPE</h1>
+        <p class="hero__titles">Full Stack Developer  |  Telecommunications Engineering </p>
+        <a class="hero__button" href="./assets/doc/CV_Rubén Quispe v2021_04_25.pdf" target="_blank">Resume</a>
+    </main>
+
+    <section class="about" id="about">
+        <h3>Hey there! I'm Rubén, Full-Stack Developer at <span class="highlight">Entel Perú</span> and <span class="highlight">Data Science</span> enthusiast</h3>
+        <p class="brackets">
+            I build web apps to configure, deploy and manage telecommunications systems, these systems can use protocols like SSH, Telnet, SNMP to monitor the network status.
+        </p>
+        <p>
+            I enjoy reading books by Isaac Asimov, who inspire me to build new applications to improve my lifestyle, one of these applications is this web, where I will share my experiencies of testing new technologies or trends. The idea is to inspire people to share their research and create a community where we can learn together.
+            <br>
+            <br>
+            We can change the world.
+        </p>
+    </section>
+
+    <section class="experience"  id="experience">
+        <div class="section__title">
+            <h3>&lt; experience &gt;</h3>
+        </div>
+        <!--Card 1-->
+        <div class="card">
+            <h5 class="card__title">Entel</h5>
+            <div class="card__img"><img src="./assets/img/entel_web.png" width="120" alt=""></div>
+            <h6 class="card__subtitle">Full Stack Developer</h6>
+            <p class="card__date">Feb 2020 - current</p>
+            <p class="card__content">
+                Develop Full-Stack CRUD platforms to handle data related to telecommunications sector like network inventory, management of projects, office tracking. Support and maintenance of Apps in PHP, REST integrations, data extraction, network KPIs analysis.
+                <br><br>
+                Technologies: Node.js, React.js, Python, Mongo DB, Oracle DB, REST, Sockets, PHP.
+            </p>
+        </div>
+        <!--Card 2-->
+        <div class="card">
+            <h5 class="card__title">Icetel</h5>
+            <div class="card__img"><img  src="./assets/img/icetel.png" alt=""></div>
+            <h6 class="card__subtitle">Developer</h6>
+            <p class="card__date">2019 - Jan 2020</p>
+            <p class="card__content">
+                Built frontend interface and backend for an application in Node.js, this application needs to connect to network equipment manager to extract data in real time from equipments like routers, switches, antennas using XML NBI (North Bound Interface).
+                <br><br>
+                Technologies: Node.js, SOAP, REST, Oracle DB.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects"  id="projects">
+        <div class="projects__title">
+            <h3>&lt; projects &gt;</h3>
+        </div>
+        <div class="projects-container">
+            <!--  project 1    -->
+            <div class="card__project">
+                <img src="assets/img/project.png" alt="project photo">
+                <div class="card__project-content">
+                    <p>Coming soon I'll upload my projects.</p>
+                    <a class="know-more">Source</a>
+                </div>
+                <div class="card__project-title">Coming soon.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact"  id="contact">
+        <div class="contact__title"><h3>&lt; contact me &gt;</h3></div>
+
+        <div class="contact-card">
+            <img src="assets/img/email.png" width="40" alt="email icon">
+            <h6>&lt; email &gt;</h6>
+            <p>
+                <a class="email" href="mailto:rwquispec@uni.pe">rwquispec@uni.pe</a>
+            </p>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="contact-card">
+            <img src="assets/img/social.png" class="social-img" width="40" alt="social media icons">
+            <h6>&lt; social &gt;</h6>
+            <div class="contact__icons">
+                <a href="https://www.linkedin.com/in/rubenqc/" target="_blank"><img class="contact__icon" src="./assets/img/icons/linkedin.svg" alt=""></a>
+                <!--<a href="https://www.linkedin.com/in/evairmacollunco/" target="_blank"><img class="contact__icon" src="./assets/img/icons/youtube.svg" alt=""></a>-->
+                <a href="https://github.com/rubenqc" target="_blank"><img class="contact__icon" src="./assets/img/icons/github.svg" alt=""></a>
+            </div>
+        </div>
+        <!-- <div class="vertical-line"></div> -->
+        <!-- <div class="contact-card">
+            <img src="assets/img/mobile.png" width="25" alt="phone icon">
+            <h6>&lt; phone &gt;</h6>
+            <p>+51 921 761 005</p>
+        </div> -->
+        <div class="credits">© 2021 Rubén Wilmer Quispe Cárdenas</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
