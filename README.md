@@ -1,2 +1,2 @@
-# myPorfolio
-It's my porfolio v2.0
+# Ruben Wilmer Quispe Cardenas - Porfolio
+It's my porfolio v1.0
