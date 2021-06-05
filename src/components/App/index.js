@@ -10,6 +10,9 @@ import {
 import Header from '../Header'
 import AboutMe from '../AboutMe'
 import Profile from "../Profile";
+import Experience from "../Experience";
+import Projects from '../Projects';
+import Footer from '../Footer'
 
 function Index() {
   return (
@@ -23,26 +26,22 @@ function Index() {
               </Column>
           </Row>
           <Row style={{margin: 0}}>
-              <Column>
+              <Column style={{padding: 0}}>
                   <AboutMe/>
               </Column>
           </Row>
+          <Row style={{margin: 0}}>
+              <Column style={{padding: 0}}>
+                 <Experience/>
+              </Column>
+          </Row>
+          <Row style={{margin: 0}}>
+              <Column style={{padding: 0}}>
+                  <Projects/>
+              </Column>
+          </Row>
       </Grid>
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Footer/>
     </div>
   );
 }
