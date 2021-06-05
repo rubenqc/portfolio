@@ -1,0 +1,22 @@
+[
+  {
+    "name": "About me",
+    "href": "/about"
+  },
+  {
+    "name": "Experience",
+    "href": "/experience"
+  },
+  {
+    "name": "Projects",
+    "href": "/projects"
+  },
+  {
+    "name": "Repositories",
+    "href": "/reps"
+  },
+  {
+    "name": "Contact me",
+    "href": "/contact"
+  }
+]

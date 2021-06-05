@@ -2,52 +2,33 @@ import logo from './logo.svg';
 import './style.css';
 
 import {
-  Header,
-  HeaderContainer,
-  HeaderName,
-  HeaderNavigation,
-  HeaderMenuButton,
-  HeaderMenuItem,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
-  SkipToContent,
-  SideNav,
-  SideNavItems,
-  HeaderSideNavItems
+    Grid,
+    Row,
+    Column
 } from 'carbon-components-react';
+
+import Header from '../Header'
+import AboutMe from '../AboutMe'
+import Profile from "../Profile";
 
 function Index() {
   return (
     <div className="App">
-      <HeaderContainer
-          render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-              <Header aria-label="Carbon Tutorial">
-                <SkipToContent />
-                <HeaderMenuButton
-                    aria-label="Open menu"
-                    onClick={onClickSideNavExpand}
-                    isActive={isSideNavExpanded}
-                />
-                <HeaderName href="/" prefix="IBM">
-                  Carbon Tutorial
-                </HeaderName>
-                <HeaderNavigation aria-label="Carbon Tutorial">
-                  <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
-                </HeaderNavigation>
-                <SideNav
-                    aria-label="Side navigation"
-                    expanded={isSideNavExpanded}
-                    isPersistent={false}>
-                  <SideNavItems>
-                    <HeaderSideNavItems>
-                      <HeaderMenuItem href="/repos">Repositories</HeaderMenuItem>
-                    </HeaderSideNavItems>
-                  </SideNavItems>
-                </SideNav>
-                <HeaderGlobalBar />
-              </Header>
-          )}
-      />
+      <Header/>
+
+      <Grid style={{marginTop: '48px', padding: '0', width: '100%'}} >
+          <Row style={{ margin: 0}}>
+              <Column style={{ padding: 0}}>
+                  <Profile/>
+              </Column>
+          </Row>
+          <Row style={{margin: 0}}>
+              <Column>
+                  <AboutMe/>
+              </Column>
+          </Row>
+      </Grid>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
