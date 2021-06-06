@@ -90,7 +90,7 @@ const Footer = () => (
 			</Row>
 			<Row>
 				<Column style={styleColumn} sm={12} md={2} lg={{span: 2, offset: 1}}>
-					<img src={logoPromitia} alt="Promitia" height={32} />
+					<img src={logoPromitia} alt="Promitia" width={60} />
 				</Column>
 			</Row>
 		</Grid>

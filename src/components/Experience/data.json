@@ -1,7 +1,7 @@
 [
   {
     "company": "Entel",
-    "logo": "entel_web.png",
+    "logo": "logo_entel.png",
     "title": "Full Stack Developer",
     "time": "Feb 2020 - current",
     "description": "Develop Full-Stack CRUD platforms to handle data related to telecommunications sector like network inventory, management of projects, office tracking. Support and maintenance of Apps in PHP, REST integrations, data extraction, network KPIs analysis.",
@@ -9,7 +9,7 @@
   },
   {
     "company": "Icetel",
-    "logo": "icetel.png",
+    "logo": "logo_icetel.png",
     "title": "Full Stack Developer",
     "time": "2019 - Jan 2020",
     "description": "Built frontend interface and backend for an application in Node.js, this application needs to connect to network equipment manager to extract data in real time from equipments like routers, switches, antennas using XML NBI (North Bound Interface).",

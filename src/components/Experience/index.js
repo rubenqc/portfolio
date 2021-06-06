@@ -9,10 +9,21 @@ import {
 	Column
 } from 'carbon-components-react';
 
+const styleContainerImage = {
+	display: 'flex',
+	textAlign: 'center',
+	justifyContent: 'center',
+	// backgroundColor: "rgba(250, 250, 250, 0.4)",
+	backgroundColor: 'rgba(1, 5, 43, 0.7)',
+	padding: '10px 0 0 0'
+}
 const styleImage = {
-	width: '50%',
-	// backgroundColor: 'white',
-	// borderRadius: '50%',
+	// width: '100%',
+	height: '120px',
+	margin: '0',
+	padding: '10px',
+	backgroundColor: 'white',
+	borderRadius: '50%'
 }
 
 const styleTitle = {
@@ -24,11 +35,12 @@ const styleTitle = {
 
 const styleCard = {
 	// borderRadius: '16px'
-	margin: '20px 0'
 }
 
 const styleContainerText = {
-	backgroundColor: "#262626"
+	backgroundColor: 'rgba(1, 5, 43, 1)',
+	padding: '10px 20px',
+	textAlign: 'left'
 }
 
 const Experience = () => {
@@ -41,13 +53,13 @@ const Experience = () => {
 				{
 					data.map(({company, logo, title, time, description, technologies}, index) => (
 						<Row>
-							<Column>
+							<Column lg={{span: 10, offset: 1}}>
 								<Grid style={styleCard} condensed>
 									<Row>
-										<Column lg={4}>
+										<Column md={2} style={styleContainerImage}>
 											<img src={`/images/experiences/${logo}`} alt="" style={styleImage}/>
 										</Column>
-										<Column lg={8} style={styleContainerText}>
+										<Column md={6} style={styleContainerText}>
 											<h6 className="card__subtitle">{title}</h6>
 											<p className="card__date">{time}</p>
 											<p className="card__content">
