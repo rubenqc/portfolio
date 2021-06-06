@@ -1,48 +1,87 @@
 import React from 'react';
 import './index.css';
 
-import logoEntel from './entel_web.png'
-import logoIcetel from './icetel.png'
+import data from './data.json'
 
-const Experience = () => (
-	<div className="experience" id="experience">
-		<div className="section__title">
-			<h3>&lt; experience &gt;</h3>
-		</div>
-		<div className="card">
-			<h5 className="card__title">Entel</h5>
-			<div className="card__img">
-				<img src={logoEntel} width="120" alt=""/>
+import {
+	Grid,
+	Row,
+	Column
+} from 'carbon-components-react';
+
+const styleImage = {
+	width: '50%',
+	// backgroundColor: 'white',
+	// borderRadius: '50%',
+}
+
+const styleTitle = {
+	textAlign: "center",
+	// backgroundColor: "#04cb97",
+	fontSize: '30px',
+	// borderRadius: '16px'
+}
+
+const styleCard = {
+	// borderRadius: '16px'
+	margin: '20px 0'
+}
+
+const styleContainerText = {
+	backgroundColor: "#262626"
+}
+
+const Experience = () => {
+	return (
+		<div className='experience'>
+			<div className="section__title">
+				<h3>&lt; experience &gt;</h3>
 			</div>
-			<h6 className="card__subtitle">Full Stack Developer</h6>
-			<p className="card__date">Feb 2020 - current</p>
-			<p className="card__content">
-				Develop Full-Stack CRUD platforms to handle data related to
-				telecommunications sector like network inventory, management of
-				projects, office tracking. Support and maintenance of Apps in PHP,
-				REST integrations, data extraction, network KPIs analysis.
-				<br/><br/>
-				Technologies: Node.js, React.js, Python, Mongo DB, Oracle DB, REST,
-				Sockets, PHP.
-			</p>
+			<Grid>
+				{
+					data.map(({company, logo, title, time, description, technologies}, index) => (
+						<Row>
+							<Column>
+								<Grid style={styleCard} condensed>
+									<Row>
+										<Column lg={4}>
+											<img src={`/images/experiences/${logo}`} alt="" style={styleImage}/>
+										</Column>
+										<Column lg={8} style={styleContainerText}>
+											<h6 className="card__subtitle">{title}</h6>
+											<p className="card__date">{time}</p>
+											<p className="card__content">
+												{description}
+												<br/><br/>
+												Technologies: {technologies}
+											</p>
+										</Column>
+									</Row>
+								</Grid>
+							</Column>
+						</Row>
+					))
+				}
+			</Grid>
+			{/*{*/}
+			{/*	data.map(({company, logo, title, time, description, technologies}, index) => (*/}
+			{/*		<div className="card" key={index}>*/}
+			{/*			<h5 className="card__title">{company}</h5>*/}
+			{/*			<div className="card__img">*/}
+			{/*				<img src={`/images/experiences/${logo}`} width="120" alt=""/>*/}
+			{/*			</div>*/}
+			{/*			<h6 className="card__subtitle">{title}</h6>*/}
+			{/*			<p className="card__date">{time}</p>*/}
+			{/*			<p className="card__content">*/}
+			{/*				{description}*/}
+			{/*				<br/><br/>*/}
+			{/*				Technologies: {technologies}*/}
+			{/*			</p>*/}
+			{/*		</div>*/}
+			{/*	))*/}
+			{/*}*/}
 		</div>
-		<div className="card">
-			<h5 className="card__title">Icetel</h5>
-			<div className="card__img">
-				<img src={logoIcetel} alt=""/>
-			</div>
-			<h6 className="card__subtitle">Developer</h6>
-			<p className="card__date">2019 - Jan 2020</p>
-			<p className="card__content">
-				Built frontend interface and backend for an application in Node.js,
-				this application needs to connect to network equipment manager to
-				extract data in real time from equipments like routers, switches,
-				antennas using XML NBI (North Bound Interface).
-				<br/><br/>
-				Technologies: Node.js, SOAP, REST, Oracle DB.
-			</p>
-		</div>
-	</div>
-)
+	)
+}
 
 export default Experience;

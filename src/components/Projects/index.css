@@ -8,16 +8,20 @@
 
 .projects {
     background-color: var(--secundary-color);
-    width: 100%;
     padding-top: 100px;
     padding-bottom: 50px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
 }
 
 .projects__title {
     color: var(--primary-color);
     width: 100%;
-    margin: 0 auto 60px;
     font-size: 35px;
 }
 
@@ -27,7 +31,7 @@
 
 .card__project {
     position: relative;
-    width: 540px;
+    width: 100%;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -41,7 +45,7 @@
 }
 
 .card__project img {
-    width: 540px;
+    width: 100%;
 }
 
 .card__project-content {
@@ -54,7 +58,7 @@
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    width: 540px;
+    width: 100%;
     transition: all 0.4s;
     opacity: 0;
 }
@@ -65,7 +69,7 @@
 }
 
 .card__project-content p {
-    width: 400px;
+    width: 100%;
     text-align: center;
     margin-bottom: 24px;
     font-size: 18px;
