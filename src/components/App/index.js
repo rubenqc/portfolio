@@ -19,7 +19,7 @@ function Index() {
     <div className="App">
       <Header/>
 
-      <Grid style={{marginTop: '48px', padding: '0', width: '100%'}} >
+      <Grid style={{marginTop: '48px', padding: '0', width: '100%', maxWidth: 'none'}} >
           <Row style={{ margin: 0}}>
               <Column style={{ padding: 0}}>
                   <Profile/>
